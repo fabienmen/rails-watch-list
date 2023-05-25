@@ -1,0 +1,16 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://dcist.com/wp-content/uploads/sites/3/2020/04/felix-mooneeram-evlkOfkQ5rE-unsplash-1500x1000.jpg');">
+  <div class="text-banner">
+    <h1>Save <strong>any</strong> kind of movies</h1>
+    <p>Lets roll the different kinds here</p>
+  </div>
+</div>
+
+<%= link_to "Create movie list", new_list_path %>
+
+<ul>
+  <% @lists.each do |list| %>
+    <li>
+      <%= list.name %> <%= link_to "View list", list_path(list) %>
+    </li>
+  <% end %>
+</ul>
